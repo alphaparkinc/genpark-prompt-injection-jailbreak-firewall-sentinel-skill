@@ -1,0 +1,38 @@
+{
+  "name": "genpark-prompt-injection-jailbreak-firewall-sentinel-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Prompt injection and jailbreak firewall sentinel inspecting untrusted payloads for indirect attacks and system prompt exfiltration.",
+  "author": "genpark",
+  "category": "agent-security",
+  "tags": [
+    "prompt-injection",
+    "jailbreak-firewall",
+    "llama-guard",
+    "guardrails",
+    "llm-security"
+  ],
+  "inputs": {
+    "untrusted_prompt_payload": {
+      "type": "string"
+    },
+    "sensitivity_tier": {
+      "type": "string"
+    }
+  },
+  "outputs": {
+    "sentinel_verdict_id": {
+      "type": "string"
+    },
+    "threat_detected": {
+      "type": "boolean"
+    },
+    "threat_category": {
+      "type": "string"
+    },
+    "security_incident_report_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
